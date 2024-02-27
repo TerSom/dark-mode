@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CuUneversity sesi 6</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&    display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>SESI 6 CUY UNIVERSITY</title>
+</head>
+<body>
+
     <div class="container">
-      <nav>
-        <a onclick="reRender()" id="home">HOME</a>
-        <a onclick="darkMode()" id="mode">MODE-DARK</a>
-      </nav>
-      <h1>gg gaminng</h1>
-      <p id="info" class="info"></p>
+        <nav>
+            <a onclick="reload()" id="reload">HOME</a>
+            <a onclick="darkMode()" id="dark">DARK-MODE</a>
+            <a onclick="redDark()" id="red">RED-DARK</a>
+            <a onclick="limeDark()" id="lime">LIME-DARK</a>
+        </nav>
+
+        <p>CUY UNIVERSITY SESI 6</p>
+        
+        <div id="info"><p></p></div>
     </div>
-    <script>
-      let body = document.body;
-      let info = document.getElementById("info")
-      let mode = document.getElementById("mode")
-      let home = document.getElementById("home")
 
-      const dakrLimit = 5;
-      let darkCointer = 0;
-      let darkRemainingLeft;
-      
-      function darkMode() {
-          if(darkRemainingLeft == 1){
-              info.textContent = "JATAH FITUR DARKMODE SUDAH HABIS"
-              mode.style.display = "none"
-              home.textContent = "RESTART"
-              return;
-            }
-            
-        darkCointer += 1;
-        darkRemainingLeft = dakrLimit - darkCointer;
+ 
+    <script src="scirpt.js">
 
-        // reder ke info element
-        info.textContent = `DarkMode dipakai ${darkCointer}x, terisisa ${darkRemainingLeft}x`
-
-        body.classList.toggle("dark");
-      }
-
-
-      function reRender(){
-        location.reload();
-      }
     </script>
-  </body>
+</body>
 </html>
